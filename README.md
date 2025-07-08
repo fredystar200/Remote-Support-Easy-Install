@@ -35,14 +35,14 @@ A simple cross-platform installer for remote support applications. Quickly insta
    
 2. **Execute this command**:
 ```powershell
-irm https://raw.githubusercontent.com/fredystar200/Remote-Support-Easy-Install/main/Win.ps1 | iex
+irm https://raw.githubusercontent.com/fredystar200/Remote-Support-Easy-Install/main/win.ps1 | iex
 ```
 
 ### For macOS and Linux
 1. **Open Terminal**
 2. **Run this command**:
 ```bash
-curl -sL https://raw.githubusercontent.com/fredystar200/Remote-Support-Easy-Install/main/Bash.sh | bash
+curl -sL https://raw.githubusercontent.com/fredystar200/Remote-Support-Easy-Install/main/bash.sh | bash
 ```
 3. Follow prompts to select your application and complete installation
 
