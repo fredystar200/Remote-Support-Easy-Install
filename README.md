@@ -31,49 +31,16 @@ A simple cross-platform installer for remote support applications. Quickly insta
    
 2. **Execute this command**:
 ```powershell
-irm https://raw.githubusercontent.com/[yourname]/[repo]/main/RemoteInstaller-Windows.ps1 | iex
+irm https://raw.githubusercontent.com/fredystar200/Remote-Support-Easy-Install/main/Win.ps1 | iex
 ```
 
 ### For macOS and Linux
 1. **Open Terminal**
 2. **Run this command**:
 ```bash
-curl -sL https://raw.githubusercontent.com/[yourname]/[repo]/main/RemoteInstaller-Unix.sh | bash
+curl -sL https://raw.githubusercontent.com/fredystar200/Remote-Support-Easy-Install/main/Bash.sh | bash
 ```
-    Follow prompts to select your application and complete installation
-
-Requirements
-
-    Windows:
-        PowerShell 5.1+
-        Administrator privileges
-        .NET Framework 4.5+
-
-    macOS:
-
-        macOS 10.13+
-
-        Terminal access
-
-        May require security exceptions
-
-    Linux:
-
-        Debian/Ubuntu-based distributions
-
-        sudo privileges
-
-        Standard build tools
-
-Security Notes
-
-    🔐 All downloads use HTTPS from official sources
-
-    🔍 Scripts are open-source and can be audited
-
-    🧩 No persistent components installed
-
-    ⚠️ Windows requires admin rights due to system installation
+3. Follow prompts to select your application and complete installation
 
 FAQ
 
@@ -98,6 +65,32 @@ System Preferences > Security & Privacy > General > Click "Open Anyway"
 
 Q: Can I install both applications?
 A: Yes, but you need to run the installer twice and select different apps each time
-Contributing
 
+Security Notes
+
+    🔐 All downloads use HTTPS from official sources
+
+    🔍 Scripts are open-source and can be audited
+
+    🧩 No persistent components installed
+
+    ⚠️ Windows requires admin rights due to system installation
+
+Requirements
+ Windows:
+   - PowerShell 5.1+
+   - Administrator privileges
+   - .NET Framework 4.5+
+        
+ macOS:
+   - macOS 10.13+
+   - Terminal access
+   - May require security exceptions
+        
+Linux:
+   - Debian/Ubuntu-based distributions
+   - sudo privileges
+   - Standard build tools
+
+Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss proposed changes.
