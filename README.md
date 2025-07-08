@@ -1,11 +1,11 @@
-# Remote Support Installer (NOT READY YET)
+# Remote Support Installer
 
 ![Platforms](https://img.shields.io/badge/Platforms-Windows%20%7C%20macOS%20%7C%20Linux-blue)
 ![Apps](https://img.shields.io/badge/Apps-AnyDesk%20%7C%20RustDesk-green)
 
 
 A simple cross-platform installer for remote support applications. Quickly install AnyDesk or RustDesk with one command for easy remote PC support and troubleshooting.
-
+## Tested on Windows 10 LTSC 21H2, Kali Linux 2025.1 (via VirtualBox)
 ## Features
 
 - 🚀 Single-command installation
@@ -35,14 +35,14 @@ A simple cross-platform installer for remote support applications. Quickly insta
    
 2. **Execute this command**:
 ```powershell
-irm https://raw.githubusercontent.com/fredystar200/Remote-Support-Easy-Install/main/win.ps1 | iex
+Invoke-WebRequest -Uri "https://github.com/fredystar200/Remote-Support-Easy-Install/raw/main/win.bat" -OutFile "$env:TEMP\win.bat"; & "$env:TEMP\win.bat"
 ```
 
 ### For macOS and Linux
 1. **Open Terminal**
 2. **Run this command**:
 ```bash
-curl -sL https://raw.githubusercontent.com/fredystar200/Remote-Support-Easy-Install/main/bash.sh | bash
+bash <(curl -fsSL https://github.com/fredystar200/Remote-Support-Easy-Install/raw/main/bash.sh)
 ```
 3. Follow prompts to select your application and complete installation
 
