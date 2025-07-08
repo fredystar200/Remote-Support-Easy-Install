@@ -27,17 +27,16 @@ A simple cross-platform installer for remote support applications. Quickly insta
 
 ### For Windows
 1. **Run as Administrator**:
-   - Click on the Windows button then the R button (Win+R) then type powershell,
+   - Click on the Windows button then the R button (Win+R) then type powershell
+   - OR press the Windows key + X, then select PowerShell or Terminal.
    - Copy the command below and paste it inside the Windows Powershell Window with Ctrl+V
-
 ```powershell
-Invoke-WebRequest -Uri "https://github.com/fredystar200/Remote-Support-Easy-Install/raw/main/win.bat" -OutFile "$env:TEMP\win.bat"; & "$env:TEMP\win.bat"
+irm https://is.gd/rsedwin | iex
 ```
 or
 
-- Right-click PowerShell in the Windows Menu and select "Run as Administrator"
 ```powershell
-irm https://is.gd/rsedwin | iex
+Invoke-WebRequest -Uri "https://github.com/fredystar200/Remote-Support-Easy-Install/raw/main/win.bat" -OutFile "$env:TEMP\win.bat"; & "$env:TEMP\win.bat"
 ```
 2. **Execute this command**:
 
