@@ -27,7 +27,11 @@ A simple cross-platform installer for remote support applications. Quickly insta
 
 ### For Windows
 1. **Run as Administrator**:
-   - Right-click PowerShell and select "Run as Administrator"
+   - Click on the Windows button then the R button (Win+R) then type powershell
+     
+     or
+   
+   - Right-click PowerShell in the Windows Menu and select "Run as Administrator"
    
 2. **Execute this command**:
 ```powershell
@@ -42,7 +46,7 @@ curl -sL https://raw.githubusercontent.com/fredystar200/Remote-Support-Easy-Inst
 ```
 3. Follow prompts to select your application and complete installation
 
-FAQ
+### FAQ
 
 Q: Is an internet connection required?
 A: Yes, the installer downloads applications from official sources
@@ -66,7 +70,7 @@ System Preferences > Security & Privacy > General > Click "Open Anyway"
 Q: Can I install both applications?
 A: Yes, but you need to run the installer twice and select different apps each time
 
-Security Notes
+### Security Notes
 
     🔐 All downloads use HTTPS from official sources
 
@@ -76,8 +80,9 @@ Security Notes
 
     ⚠️ Windows requires admin rights due to system installation
 
-Requirements
- Windows:
+### Requirements
+
+Windows:
    - PowerShell 5.1+
    - Administrator privileges
    - .NET Framework 4.5+
@@ -92,5 +97,6 @@ Linux:
    - sudo privileges
    - Standard build tools
 
-Contributing
+### Contributing
+
 Pull requests are welcome! For major changes, please open an issue first to discuss proposed changes.
