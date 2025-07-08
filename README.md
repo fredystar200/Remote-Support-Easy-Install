@@ -20,7 +20,7 @@ A simple cross-platform installer for remote support applications. Quickly insta
 | Platform | AnyDesk | RustDesk |
 |----------|---------|----------|
 | **Windows** | ✅ | ✅ |
-| **macOS** | ✅ | ✅ |
+| **macOS (but not tested yet)** | ✅ | ✅ |
 | **Linux (Debian / Ubuntu)** | ✅ | ✅ |
 
 ## Installation Instructions
