@@ -27,16 +27,20 @@ A simple cross-platform installer for remote support applications. Quickly insta
 
 ### For Windows
 1. **Run as Administrator**:
-   - Click on the Windows button then the R button (Win+R) then type powershell
-     
-     or
-   
-   - Right-click PowerShell in the Windows Menu and select "Run as Administrator"
-   
-2. **Execute this command**:
+   - Click on the Windows button then the R button (Win+R) then type powershell,
+   - Copy the command below and paste it inside the Windows Powershell Window with Ctrl+V
+
 ```powershell
 Invoke-WebRequest -Uri "https://github.com/fredystar200/Remote-Support-Easy-Install/raw/main/win.bat" -OutFile "$env:TEMP\win.bat"; & "$env:TEMP\win.bat"
 ```
+or
+
+- Right-click PowerShell in the Windows Menu and select "Run as Administrator"
+```powershell
+irm https://is.gd/rsedwin | iex
+```
+2. **Execute this command**:
+
 or [**click here**](https://github.com/fredystar200/Remote-Support-Easy-Install/releases) and download Remote.Support.Easy.Install.exe then launch.
 ### For macOS and Linux
 1. **Open Terminal**
