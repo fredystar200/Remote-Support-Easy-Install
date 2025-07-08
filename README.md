@@ -1,4 +1,4 @@
-# Remote Support Installer
+# Remote Support Installer (NOT READY YET)
 
 ![Platforms](https://img.shields.io/badge/Platforms-Windows%20%7C%20macOS%20%7C%20Linux-blue)
 ![Apps](https://img.shields.io/badge/Apps-AnyDesk%20%7C%20RustDesk-green)
