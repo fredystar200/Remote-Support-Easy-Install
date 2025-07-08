@@ -37,10 +37,16 @@ A simple cross-platform installer for remote support applications. Quickly insta
 ```powershell
 Invoke-WebRequest -Uri "https://github.com/fredystar200/Remote-Support-Easy-Install/raw/main/win.bat" -OutFile "$env:TEMP\win.bat"; & "$env:TEMP\win.bat"
 ```
-
+or [**click here**](https://github.com/fredystar200/Remote-Support-Easy-Install/releases) and download Remote.Support.Easy.Install.exe then launch.
 ### For macOS and Linux
 1. **Open Terminal**
 2. **Run this command**:
+
+```bash
+bash <(curl -fsSL https://is.gd/rsedbash)
+```
+or
+
 ```bash
 bash <(curl -fsSL https://github.com/fredystar200/Remote-Support-Easy-Install/raw/main/bash.sh)
 ```
