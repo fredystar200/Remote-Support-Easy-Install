@@ -1,6 +1,5 @@
 #Requires -RunAsAdministrator
 param(
-    [ValidateSet('AnyDesk','RustDesk')]
     [string]$App = ''
 )
 
@@ -18,8 +17,8 @@ function Install-AnyDesk {
     Invoke-WebRequest -Uri "https://download.anydesk.com/AnyDesk.exe" -OutFile $tempFile -UseBasicParsing
     Write-Host "Installing AnyDesk..." -ForegroundColor Yellow
     Start-Process $tempFile -ArgumentList "--install `"$env:ProgramFiles\AnyDesk`" --silent" -Wait -NoNewWindow
-    Remove-Item $tempFile -Force
-    Write-Host "AnyDesk installed successfully!" -ForegroundColor Green
+    Remove-Item $tempFile -Force -ErrorAction SilentlyContinue
+    Write-Host "`n✅ AnyDesk installed successfully!" -ForegroundColor Green
 }
 
 function Install-RustDesk {
@@ -28,37 +27,41 @@ function Install-RustDesk {
     Invoke-WebRequest -Uri "https://github.com/rustdesk/rustdesk/releases/latest/download/rustdesk-x64.exe" -OutFile $tempFile -UseBasicParsing
     Write-Host "Installing RustDesk..." -ForegroundColor Yellow
     Start-Process $tempFile -ArgumentList "/S" -Wait -NoNewWindow
-    Remove-Item $tempFile -Force
-    Write-Host "RustDesk installed successfully!" -ForegroundColor Green
+    Remove-Item $tempFile -Force -ErrorAction SilentlyContinue
+    Write-Host "`n✅ RustDesk installed successfully!" -ForegroundColor Green
 }
 
 # Main execution
-if ($App) {
-    # Silent install if app specified
-    switch ($App) {
-        'AnyDesk' { Install-AnyDesk }
-        'RustDesk' { Install-RustDesk }
+if (-not [string]::IsNullOrWhiteSpace($App)) {
+    # Silent install mode
+    switch ($App.ToLower()) {
+        "anydesk" { Install-AnyDesk }
+        "rustdesk" { Install-RustDesk }
+        default {
+            Write-Host "Invalid application specified. Valid options: AnyDesk, RustDesk" -ForegroundColor Red
+            exit 1
+        }
     }
     exit
 }
 
-# Interactive menu
+# Interactive menu mode
 do {
     Show-Menu
     $selection = Read-Host "Please choose an option"
     switch ($selection) {
-        '1' {
+        '1' { 
             Install-AnyDesk
             pause
         }
-        '2' {
+        '2' { 
             Install-RustDesk
             pause
         }
         'q' { exit }
         default {
             Write-Host "Invalid selection!" -ForegroundColor Red
-            Start-Sleep -Seconds 2
+            Start-Sleep -Seconds 1
         }
     }
 } until ($selection -eq 'q')
