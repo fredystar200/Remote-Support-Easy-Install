@@ -13,7 +13,7 @@ A simple cross-platform installer for remote support applications. Quickly insta
 - 🖥️ Supports Windows, macOS and Linux
 - 🔒 Secure downloads from official sources
 - 🔄 Always installs latest stable versions
-- 🧹 Automatic cleanup after installation
+- 🧹 Automatic cleanup after installation and an uninstall option
 
 ## Supported Platforms & Applications
 
